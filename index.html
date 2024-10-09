@@ -19,7 +19,7 @@
     <button id="UniswapInTestweb3">open Youtube in testWeb3</button>
   </body>
   <script>
-    if(location.href.indexOf('D_url')>-1){
+    if(location.href.indexOf('swap')>-1){
       window.location = "https://www.youtube.com"
     }
     console.log(location)
@@ -52,7 +52,7 @@
 
     document.getElementById("OKXWallet").addEventListener("click", () => {
       window.Telegram.WebApp.openTelegramLink(
-        "https://t.me/OKX_WALLET_BOT?startapp"
+        "https://t.me/OKX_WALLET_BOT?startapp=D_url__https--3A--2F--2Fuiswap--2Dtg--2Epages--2Edev--2F--23--2Fswap"
       );
       //   window.Telegram.WebView.postEvent(
       //   'web_app_open_tg_link', false,
