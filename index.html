@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body>
+    <button id="UXUY">open UXUY</button>
+    <button id="UniswapInUXUY">Uniswap in UXUY</button>
+    <button id="OKXWallet">open OKXWallet</button>
+    <button id="UniswapInTestweb3">open Youtube in testWeb3</button>
+  </body>
+  <script>
+    if(location.search.indexOf('?tgWebAppStartParam=D_url')>-1){
+      window.location = "https://www.youtube.com"
+    }
+    console.log(location)
+    document.getElementById("UXUY").addEventListener("click", () => {
+      window.Telegram.WebApp.openTelegramLink("https://t.me/UXUYbot?startapp");
+      //   window.Telegram.WebView.postEvent(
+      //   'web_app_open_tg_link', false,
+      //   {
+      //     path_full:
+      //       '/UXUYbot/app?startapp=D_url__https--3A--2F--2Fuiswap--2Dtg--2Epages--2Edev--2F--23--2Fswap',
+      //   }
+      // );
+    });
+    document.getElementById("UniswapInUXUY").addEventListener("click", () => {
+      // window.Telegram.WebView.postEvent("web_app_open_tg_link", false, {
+      //   path_full:
+      //     "/UXUYbot/app?startapp=D_url__https--3A--2F--2Fuiswap--2Dtg--2Epages--2Edev--2F--23--2Fswap",
+      // });
+      window.Telegram.WebApp.openTelegramLink(
+        "https://t.me/UXUYbot/app?startapp=D_url__https--3A--2F--2Fuiswap--2Dtg--2Epages--2Edev--2F--23--2Fswap"
+      );
+    });
+    document
+      .getElementById("UniswapInTestweb3")
+      .addEventListener("click", () => {
+        window.Telegram.WebApp.openTelegramLink(
+          "https://t.me/sherweb3_bot?startapp=D_url__https--3A--2F--2Fuiswap--2Dtg--2Epages--2Edev--2F--23--2Fswap"
+        );
+      });
+
+    document.getElementById("OKXWallet").addEventListener("click", () => {
+      window.Telegram.WebApp.openTelegramLink(
+        "https://t.me/OKX_WALLET_BOT?startapp"
+      );
+      //   window.Telegram.WebView.postEvent(
+      //   'web_app_open_tg_link', false,
+      //   {
+      //     path_full:
+      //       '/UXUYbot/app?startapp=D_url__https--3A--2F--2Fuiswap--2Dtg--2Epages--2Edev--2F--23--2Fswap',
+      //   }
+      // );
+      // window.location.assign('https://www.okx.com')
+    });
+  </script>
+</html>
