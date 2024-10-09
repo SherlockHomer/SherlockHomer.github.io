@@ -13,7 +13,7 @@
     <button id="UniswapInTestweb3">open Youtube in testWeb3</button>
   </body>
   <script>
-    if(location.href.indexOf('app')>-1){
+    if(location.href.indexOf('D_url')>-1){
       window.location = "https://www.youtube.com"
     }
     console.log(location)
@@ -40,7 +40,7 @@
       .getElementById("UniswapInTestweb3")
       .addEventListener("click", () => {
         window.Telegram.WebApp.openTelegramLink(
-          "https://t.me/sherweb3_bot/app"
+          "https://t.me/sherweb3_bot?startapp=D_url__app"
         );
       });
 
