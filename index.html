@@ -11,6 +11,10 @@
         font-size: 20px;
         margin-bottom: 20px;
       }
+      input {
+        display: block;
+        margin-bottom: 20px;
+      }
     </style>
   </head>
   <body>
@@ -19,6 +23,7 @@
       alt=""
       style="width: 100px; height: 100px"
     />
+    <input type="text" id="input" placeholder="input img link" />
     <button id="UXUY">open UXUY</button>
     <button id="UniswapInUXUY">Uniswap in UXUY</button>
     <button id="OKXWallet">open OKXWallet</button>
@@ -29,6 +34,14 @@
       open Youtube in testWeb3 with /app
     </button>
   </body>
+  <script>
+    input.addEventListener("input", (e) => {
+      const img = document.querySelector("img");
+      img.src =
+        e.target.value ||
+        "https://static.coinall.ltd/cdn/nft/files/a191d2f8-2ae9-4195-b22c-840a9303b49c.svg";
+    });
+  </script>
   <script>
     if (location.search.indexOf("swap") > -1) {
       window.location = "https://www.youtube.com";
